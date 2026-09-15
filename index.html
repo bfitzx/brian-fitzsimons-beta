@@ -368,9 +368,7 @@
     .journal-row-time { text-align: left; }
   }
 
-  /* ---------- creative ---------- */
-  .creative-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--hairline-soft); flex-wrap: wrap; }
-  .creative-row:last-child { border-bottom: none; }
+  /* ---------- github graph (displayed in lab) ---------- */
   .gh-graph-scroll { width: 100%; max-width: 722px; overflow-x: auto; padding-bottom: 4px; }
   .gh-graph-wrap { display: flex; flex-direction: column; gap: 6px; width: max-content; min-width: 100%; min-height: 100px; }
   .gh-graph-months { display: grid; grid-auto-flow: column; grid-auto-columns: 10px; gap: 2px; margin-left: 22px; height: 12px; font-size: 10px; color: var(--on-primary-mute); opacity: 0.6; letter-spacing: 0.4px; }
@@ -581,10 +579,6 @@
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#lab">Lab</a></li>
     <li><a href="#writing">Journal</a></li>
-    <li><a href="#creative">Make</a></li>
-    <!-- External project links — add the real URLs once each is live -->
-    <li><a href="#" target="_blank" rel="noopener">GODMODE</a></li>
-    <li><a href="#" target="_blank" rel="noopener">Astra1</a></li>
   </ul>
 </nav>
 <div class="nav-backdrop" id="nav-backdrop"></div>
@@ -905,6 +899,23 @@
       </div>
 
     </div>
+
+    <div style="margin-top: 48px;">
+      <div class="micro-cap">Music, Art &amp; Making</div>
+      <div style="margin-top: 28px;">
+        <div class="micro-cap">Code — Live from GitHub</div>
+        <!-- Custom red/black contribution graph — built from /api/github-contributions, no external chart image -->
+        <div class="gh-graph-scroll" style="margin-top: 16px;">
+          <div class="gh-graph-wrap" id="gh-graph" role="img" aria-label="Brian's GitHub contribution graph">
+            <div class="micro-cap">Loading contribution graph…</div>
+          </div>
+        </div>
+        <ul class="gh-activity" id="gh-activity">
+          <li class="micro-cap">Loading recent activity…</li>
+        </ul>
+        <a href="https://github.com/bfitzx" class="button-cap plain" target="_blank" rel="noopener" style="margin-top: 12px; display: inline-block;">View GitHub →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -970,30 +981,6 @@
 
     </div>
     <div class="journal-empty" id="journal-empty">No entries match — try a different filter or search.</div>
-  </div>
-</section>
-
-<section class="band" id="creative">
-  <div class="band-inner">
-    <div class="micro-cap">Music, Art &amp; Making</div>
-    <h2 class="display display-xl" style="margin-top: 8px;">Make</h2>
-
-    <div style="margin-top: 40px;">
-      <div class="creative-row" style="flex-direction: column; align-items: flex-start;">
-        <div class="micro-cap">Code — Live from GitHub</div>
-        <!-- Custom red/black contribution graph — built from /api/github-contributions, no external chart image -->
-        <div class="gh-graph-scroll">
-          <div class="gh-graph-wrap" id="gh-graph" role="img" aria-label="Brian's GitHub contribution graph">
-            <div class="micro-cap">Loading contribution graph…</div>
-          </div>
-        </div>
-        <ul class="gh-activity" id="gh-activity">
-          <li class="micro-cap">Loading recent activity…</li>
-        </ul>
-        <a href="https://github.com/bfitzx" class="button-cap plain" target="_blank" rel="noopener">View GitHub →</a>
-      </div>
-      <!-- Add a visual-art entry here once there's a real project to show -->
-    </div>
   </div>
 </section>
 
